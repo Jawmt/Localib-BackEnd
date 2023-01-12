@@ -1,7 +1,7 @@
 version: "3"
 services:
   localib-jdbc:
-    image: localib
+    build: .
     ports:
       - "8080:8080"
     networks:
