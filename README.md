@@ -18,7 +18,7 @@
 
 #### Build de l'application :
 ```
-./mvnw clean package
+./mvnw -DskipTests clean package 
 ```
 #### Construction de l'image docker :
 ```
