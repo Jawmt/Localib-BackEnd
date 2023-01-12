@@ -16,10 +16,16 @@
 
 # Getting Started Docker
 
+#### Build de l'application :
 ```
-#Construction de l'image docker
+./mvnw clean package
+```
+#### Construction de l'image docker :
+```
 docker build -t localib .
-#Run de l'application via le fichier docker-compose
+```
+#### Run de l'application via le fichier docker-compose :
+```
 docker compose up -d
 ```
 
