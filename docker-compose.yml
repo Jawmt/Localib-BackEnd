@@ -1,0 +1,24 @@
+version: "3"
+services:
+  localib-jdbc:
+    image: localib
+    ports:
+      - "8080:8080"
+    networks:
+      - localib-mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/localib?autoReconnect=true&useSSL=false
+    depends_on:
+      - mysqldb
+
+
+  mysqldb:
+    image: mysql:5.7
+    networks:
+      - localib-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=localib
+
+networks:
+  localib-mysql:

@@ -14,7 +14,16 @@
 
 <!-- ABOUT THE PROJECT -->
 
-# Getting Started
+# Getting Started Docker
+
+```
+#Construction de l'image docker
+docker build -t localib .
+#Run de l'application via le fichier docker-compose
+docker compose up -d
+```
+
+# Getting Started Manuellement
 
 ### Modifier le fichier env.properties au niveau de la racine pour indiquer les données de connexion Mysql.
 
