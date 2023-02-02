@@ -5,9 +5,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("vehicule")
+@RequestMapping("vehicules")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class VehiculeController {
 
     private VehiculeService vehiculeService;
@@ -23,6 +25,11 @@ public class VehiculeController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(vehicules, HttpStatus.OK);
+    }
+    @GetMapping("{id}")
+    public ResponseEntity<Vehicule> find(@PathVariable("id") Long id) {
+        Optional<Vehicule> vehicule = this.vehiculeService.findById(id);
+        return new ResponseEntity<>(vehicule.get(), HttpStatus.OK);
     }
 
     @PostMapping

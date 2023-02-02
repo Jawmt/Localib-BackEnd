@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("client")
-@CrossOrigin
+@CrossOrigin("*")
 public class ClientController {
 
     private ClientService clientService;
