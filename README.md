@@ -24,6 +24,7 @@
 #### Run de l'application via le fichier docker-compose :
 ```
 docker compose up -d
+//Relancer la commande une deuxième fois si le docker s'arrête après lancement
 ```
 
 # Getting Started Manuellement
